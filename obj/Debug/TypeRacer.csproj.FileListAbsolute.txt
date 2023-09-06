@@ -1,0 +1,11 @@
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\bin\Debug\TypeRacer.exe.config
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\bin\Debug\TypeRacer.exe
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\bin\Debug\TypeRacer.pdb
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.csproj.AssemblyReference.cache
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.Form1.resources
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.Properties.Resources.resources
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.csproj.GenerateResource.cache
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.csproj.CoreCompileInputs.cache
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.exe
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.pdb
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.GameForm.resources
