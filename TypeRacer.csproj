@@ -99,7 +99,10 @@
     <None Include="opacity_background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="xx.jpg" />
+    <None Include="bin\Debug\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\typeracergui.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
