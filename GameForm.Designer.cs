@@ -45,7 +45,7 @@
             this.UserInputBox.MaxLength = 45;
             this.UserInputBox.MinimumSize = new System.Drawing.Size(150, 25);
             this.UserInputBox.Name = "UserInputBox";
-            this.UserInputBox.Size = new System.Drawing.Size(150, 25);
+            this.UserInputBox.Size = new System.Drawing.Size(150, 23);
             this.UserInputBox.TabIndex = 0;
             this.UserInputBox.TextChanged += new System.EventHandler(this.UserInputBox_TextChanged);
             // 

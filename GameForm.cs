@@ -16,13 +16,16 @@ namespace TypeRacer
     public partial class GameForm : Form
     {
         private Form1 form1Reference;
+        private EndGameForm endGameFormReference;
         private string[] words;
         private string[] correctWords = new string[0];
         private int currentWordIndex = 0;
         private int countdownSeconds = 4;
         private int resultTime = 0;
         private bool closingButton = true;
-       
+
+        public bool ClosingButton { get; set; }
+        public int ResultTime { get; set; } 
         public GameForm(Form1 form1)
         {
             InitializeComponent();
@@ -39,7 +42,7 @@ namespace TypeRacer
         
         private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.closingButton)
+            if (ClosingButton)
             {
                 Application.Exit();
             }
@@ -59,10 +62,20 @@ namespace TypeRacer
             return (words, text[randomLineIndex]);
         }
 
-        private int CalculateResults()
+        public int CalculateResults()
         {
-            float WPM = (((float)this.words.Length)/this.resultTime)*60;
+            float WPM = (((float)this.words.Length)/ResultTime)*60;
             return (int)WPM;
+        }
+
+        public void ResetGame()
+        {
+            ResultTime = 0;
+            this.currentWordIndex = 0;
+            this.correctWords = new string[0];
+            this.words = GetWords().Item1;
+            displayedText.Text = GetWords().Item2;
+            timerGameStart.Start();
         }
 
         private void UserInputBox_TextChanged(object sender, EventArgs e)
@@ -87,13 +100,8 @@ namespace TypeRacer
                 if (this.currentWordIndex == this.words.Length)
                 {
                     timerResult.Stop();
-                    MessageBox.Show($"Congratulations! You've completed the sentence.\nYour time: {this.resultTime}\nWPM: {CalculateResults()}");
-                    this.resultTime = 0;
-                    this.currentWordIndex = 0;
-                    this.correctWords = new string[0];
-                    this.words = GetWords().Item1;
-                    displayedText.Text = GetWords().Item2;
-                    timerGameStart.Start();
+                    this.endGameFormReference = new EndGameForm(this);
+                    this.endGameFormReference.Show();                 
                 }
             }
             
@@ -101,7 +109,7 @@ namespace TypeRacer
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
-            this.closingButton = false;
+            ClosingButton = false;
             DialogResult choice = MessageBox.Show("When you leave you can't comeback to your current game again.\nDo you want to leave?","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (choice == DialogResult.Yes)
             {
@@ -134,7 +142,7 @@ namespace TypeRacer
 
         private void timerResult_Tick(object sender, EventArgs e)
         {
-            this.resultTime++;
+            ResultTime++;
         }
     }
 }   

@@ -9,3 +9,4 @@ C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.csproj.C
 C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.exe
 C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.pdb
 C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.GameForm.resources
+C:\Users\Jasiek\Desktop\programing\github\TypeRacer\obj\Debug\TypeRacer.EndGameForm.resources
