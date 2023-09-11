@@ -22,17 +22,20 @@ namespace TypeRacer
         private int currentWordIndex = 0;
         private int countdownSeconds = 4;
         private int resultTime = 0;
-        private bool closingButton = true;
+        private bool closingButton;
 
         public bool ClosingButton { get; set; }
         public int ResultTime { get; set; } 
         public GameForm(Form1 form1)
         {
             InitializeComponent();
+            ClosingButton = true;
             this.form1Reference = form1;
             this.words = GetWords().Item1;
             displayedText.Text = GetWords().Item2;
-        }   
+            displayedText.Visible = false;
+            labelTimer.Visible = true;
+        }
 
         private void GameForm_Load(object sender, EventArgs e)
         {   
@@ -70,7 +73,10 @@ namespace TypeRacer
 
         public void ResetGame()
         {
+            displayedText.Visible=false;
+            labelTimer.Visible = true;
             ResultTime = 0;
+            this.countdownSeconds = 4;
             this.currentWordIndex = 0;
             this.correctWords = new string[0];
             this.words = GetWords().Item1;
@@ -101,14 +107,15 @@ namespace TypeRacer
                 {
                     timerResult.Stop();
                     this.endGameFormReference = new EndGameForm(this);
-                    this.endGameFormReference.Show();                 
+                    this.endGameFormReference.ShowDialog();
                 }
             }
             
         }
 
-        private void buttonMenu_Click(object sender, EventArgs e)
+        private async void buttonMenu_Click(object sender, EventArgs e)
         {
+            buttonMenu.Image = Properties.Resources.MenuClicked;
             ClosingButton = false;
             DialogResult choice = MessageBox.Show("When you leave you can't comeback to your current game again.\nDo you want to leave?","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (choice == DialogResult.Yes)
@@ -116,7 +123,7 @@ namespace TypeRacer
                 this.Close();
                 this.form1Reference.Show();
             }
-
+            buttonMenu.Image = Properties.Resources.Menu;
 
         }
 
@@ -127,6 +134,9 @@ namespace TypeRacer
             {
                 timerGameStart.Stop();
                 labelTimer.Text = "START!";
+                labelTimer.Visible = false;
+                labelTimer.Text = null;
+                displayedText.Visible = true;
                 string rtfText = @"{\rtf1\ansi\deff0" + @"{\colortbl;\red0\green255\blue0;}" + @"\ul" + $@"\cf0{words[0]}" + @"\ulnone " + $@"\cf0{string.Join("", words.Skip(1))}" + @"}";
                 displayedText.Rtf = rtfText;
                 UserInputBox.Enabled = true;
@@ -143,6 +153,21 @@ namespace TypeRacer
         private void timerResult_Tick(object sender, EventArgs e)
         {
             ResultTime++;
+        }
+
+        private void labelTimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void displayedText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }   

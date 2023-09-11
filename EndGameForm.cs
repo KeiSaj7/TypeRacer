@@ -39,5 +39,10 @@ namespace TypeRacer
             this.gameFormReference.ClosingButton = true;
             this.gameFormReference.ResetGame();
         }
+
+        private void richTextResults_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

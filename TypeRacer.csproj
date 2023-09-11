@@ -103,16 +103,31 @@
     <None Include="background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="typeracergui.jpg" />
+    <None Include="bin\Debug\graphics\Play.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="opacity_background.jpg" />
+    <None Include="bin\Debug\graphics\TypeRacer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\background.jpg" />
+    <None Include="bin\Debug\graphics\TextScreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\typeracergui.jpg" />
+    <None Include="bin\Debug\graphics\TextInput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\PlayUnclicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\ResultsScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\githubIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\MenuClicked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
