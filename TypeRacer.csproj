@@ -129,5 +129,17 @@
   <ItemGroup>
     <None Include="bin\Debug\graphics\MenuClicked.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\newgame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\newgame2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\smallmenu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\graphics\smallmenu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

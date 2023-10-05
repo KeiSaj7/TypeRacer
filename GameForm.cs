@@ -116,6 +116,7 @@ namespace TypeRacer
         private async void buttonMenu_Click(object sender, EventArgs e)
         {
             buttonMenu.Image = Properties.Resources.MenuClicked;
+            await Task.Delay(100);
             ClosingButton = false;
             DialogResult choice = MessageBox.Show("When you leave you can't comeback to your current game again.\nDo you want to leave?","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (choice == DialogResult.Yes)

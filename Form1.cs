@@ -32,15 +32,13 @@ namespace TypeRacer
 
         private async void buttonPlay_Click(object sender, EventArgs e)
         {
-            buttonPlay.Image = Properties.Resources.Play;
+            buttonPlay.Image = Properties.Resources.PlayUnclicked;
             await Task.Delay(100);
             GameForm gameForm = new GameForm(this);
             gameForm.StartPosition = FormStartPosition.CenterScreen;
             gameForm.Show();
             this.Hide();
-            buttonPlay.Image = Properties.Resources.PlayUnclicked;
-
-
+            buttonPlay.Image = Properties.Resources.Play;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

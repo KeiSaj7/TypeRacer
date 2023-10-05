@@ -62,7 +62,7 @@
             this.buttonPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlay.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPlay.Image = global::TypeRacer.Properties.Resources.PlayUnclicked;
+            this.buttonPlay.Image = global::TypeRacer.Properties.Resources.Play;
             this.buttonPlay.Location = new System.Drawing.Point(719, 756);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(400, 106);

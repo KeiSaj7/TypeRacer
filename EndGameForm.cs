@@ -26,18 +26,24 @@ namespace TypeRacer
             
         }
 
-        private void buttonMenu_Click(object sender, EventArgs e)
+        private async void buttonMenu_Click(object sender, EventArgs e)
         {
+            buttonMenu.Image = Properties.Resources.smallmenu;
+            await Task.Delay(100);
             this.gameFormReference.ClosingButton = false;
             this.gameFormReference.Close();
             this.Close();
+            buttonMenu.Image = Properties.Resources.smallmenu2;
         }
 
-        private void buttonNewGame_Click(object sender, EventArgs e)
+        private async void buttonNewGame_Click(object sender, EventArgs e)
         {
+            buttonNewGame.Image = Properties.Resources.newgame2;
+            await Task.Delay(100);
             this.Close();
             this.gameFormReference.ClosingButton = true;
             this.gameFormReference.ResetGame();
+            buttonNewGame.Image = Properties.Resources.newgame;
         }
 
         private void richTextResults_TextChanged(object sender, EventArgs e)
